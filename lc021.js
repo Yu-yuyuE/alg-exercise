@@ -3,6 +3,7 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
+// 创建虚拟头结点、迭代
 // var mergeTwoLists = function(list1, list2) {
 //     let head = new ListNode();
 //     let p = head;
@@ -21,9 +22,9 @@
 //     return head.next;
 // };
 
+// 虚拟头结点、递归
 var mergeTwoLists = function(list1, list2) {
     let head = new ListNode();
-    let p = head;
     function dfs (root, p){
         if(!list1 || !list2) {
             if(!list1) p.next = list2;
